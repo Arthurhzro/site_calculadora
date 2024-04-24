@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)file:///C:/Users/Marise%20Miranda/Downloads/Marises%20Machine.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+        
+              
+        <div class="div_papai">
+
+                <div class="div_filho">
+                        <audio id="meuAudio" controls autoplay loop>
+                                <source src="musica.mp3" type="audio/mpeg">
+                              </audio>
+                              <!-- Não repreduz sozinho -->
+
+        <h1>Maquina do Arthur</h1>
+
+<br><br>
+
+                        
+
+        <h3 class="decimal">Decimal</h3>
+        <input id="demo1" type="text" placeholder="Digite o valor em decimal">
+        
+<br><br>
+
+        
+        <h3>converter para:</h3>
+
+        <div class="conversao">
+        
+        <div class="div_divisora">
+               <b>Octal</b> <br>
+               <b>Hexadecimal</b> <br>
+               <b>Binário</b> <br>
+        </div>
+        
+        <div class="div_checks">
+        <input id="input_octal"  type="checkbox">  <br>  
+        <input id="input_hexa"  type="checkbox"> <br>
+        <input id="input_bin"  type="checkbox"> <br>
+<br></div>
+        
+       
+        <div class="resultado">
+        <div class="demo2" id="demo2">-</div>
+        <div class="demo3" id="demo3">-</div>
+        <div class="demo4" id="demo4">-</div>
+
+        </div></div>
+<br><br> 
+
+<div class="div_botoes">
+<button class="botao" onclick="converter()"><span>Converter</span></button> <br> <br>
+<div id="btn_volta" class="div_btnvolta"></div></div>
+
+        </div>
+  </div>
+
+
+<script>
+
+function converter() {
+    
+        var decimalValue = Number(demo1.value)
+
+
+        var binario = ''
+         var hexa = ''
+         var octal = ''
+
+            if (document.getElementById('input_hexa').checked) {
+                demo3.style.display = 'block'; 
+                hexa += `${decimalValue.toString(16)}`; 
+                demo3.innerHTML = `${hexa}`
+                btn_volta.innerHTML = `<button class="botao" onclick="volta()">Resetar</button>`
+            }
+            if (document.getElementById('input_octal').checked) {
+                demo2.style.display = 'block'; 
+                octal += `${decimalValue.toString(8)}`; 
+                demo2.innerHTML = `${octal}`
+                btn_volta.innerHTML = `<button class="botao" onclick="volta()">Resetar</button>`
+            }
+            if (document.getElementById('input_bin').checked) {
+                demo4.style.display = 'block'; 
+                binario += `${decimalValue.toString(2)}`; 
+                demo4.innerHTML = `${binario}`
+                btn_volta.innerHTML = `<button class="botao" onclick="volta()">Resetar</button>`
+            }
+
+
+
+}
+
+
+function volta(){
+
+        document.getElementById("demo1").innerHTML = ``;
+        demo1.value = 0; 
+        document.getElementById("demo2").innerHTML = `-`;
+        document.getElementById("demo3").innerHTML = `-`;
+        document.getElementById("demo4").innerHTML = `-`;
+        btn_volta.innerHTML = ``
+
+}
+
+
+</script></body></html>

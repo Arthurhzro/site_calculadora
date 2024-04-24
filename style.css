@@ -1,0 +1,54 @@
+body {
+  background-image: url(https://i.pinimg.com/originals/6a/c9/ed/6ac9edd32f9cac340295f962f511ac07.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+input {
+  border-radius: 8px;
+}
+
+.div_papai{
+  display: flex;
+  justify-content: center;
+}
+
+.div_filho {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  height: 100%;
+  min-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(100, 0, 51, 0.5);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+}
+
+.decimal{
+  scale: 1.5;
+}
+
+.conversao{
+  display: flex;
+  flex-direction: row;
+}
+
+.resultado {
+  padding-left: 20px;
+}
+
+.botao{
+  color: darkslategrey;
+  background-color: #cca9dd;
+  border-radius: 8px;
+  transition: transform 1s;
+  scale: 1.5;
+}
+
+button:hover,
+button:focus {
+  color: white;
+}
